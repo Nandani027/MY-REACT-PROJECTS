@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+body{
+  margin: 0;
+  min-height: 100vh;
+
+  background-image: url("clock.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  overflow: hidden;
+}
+
+.clock-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 100vh;
+
+  padding-left: 20%;
+}
+
+.clock{
+  background: rgba(0, 0, 0, 0.25);
+
+  padding: 30px 60px;
+
+  backdrop-filter: blur(5px);
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+    0 0 15px rgba(0,0,0,0.4),
+    0 0 20px rgba(255,255,255,0.08);
+
+  text-align: center;
+
+  width: 650px;
+}
+
+
+
+.clock span{
+  color: white;
+
+  font-size: 5rem;
+
+  font-family: 'Orbitron', sans-serif;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.5);
+
+  font-variant-numeric: tabular-nums;
+}

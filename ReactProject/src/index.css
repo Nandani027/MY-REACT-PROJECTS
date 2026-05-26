@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+
+  background:
+  radial-gradient(circle at top left, #2dd4bf 0%, transparent 30%),
+  radial-gradient(circle at bottom right, #86efac 0%, transparent 30%),
+  linear-gradient(135deg, #071a1a, #0f172a);
+
+  color: white;
+
+  overflow-x: hidden;
+}
+
+.portfolio{
+  padding: 60px 8%;
+  position: relative;
+}
+
+.main-title{
+  text-align: center;
+
+  font-size: 4rem;
+
+  margin-bottom: 70px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  background: linear-gradient(to right, #5eead4, #86efac);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 25px rgba(45,212,191,0.35);
+}
+
+.projects-container{
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 35px;
+}
+
+.project-card{
+  position: relative;
+
+  background: rgba(255,255,255,0.07);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 28px;
+
+  padding: 35px;
+
+  backdrop-filter: blur(14px);
+
+  overflow: hidden;
+
+  transition: 0.4s ease;
+
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.25);
+}
+
+.project-card::before{
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  background: rgba(255,255,255,0.05);
+
+  border-radius: 50%;
+
+  top: -120px;
+  right: -120px;
+}
+
+.project-card:hover{
+  transform: translateY(-12px) scale(1.03);
+
+  border: 1px solid rgba(94,234,212,0.45);
+
+  box-shadow:
+  0 15px 40px rgba(0,0,0,0.45),
+  0 0 25px rgba(45,212,191,0.25),
+  0 0 45px rgba(134,239,172,0.18);
+}
+
+.project-card h2{
+  font-size: 2rem;
+
+  margin-bottom: 18px;
+
+  font-weight: 700;
+
+  position: relative;
+  z-index: 2;
+
+  color: #ecfeff;
+}
+
+.project-card p{
+  color: #d1fae5;
+
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+
+  font-size: 1rem;
+
+  position: relative;
+  z-index: 2;
+}
+
+.buttons{
+  display: flex;
+  gap: 15px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.buttons button{
+  flex: 1;
+
+  padding: 13px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  font-weight: 600;
+
+  font-family: 'Poppins', sans-serif;
+
+  color: white;
+}
+
+.buttons button:first-child{
+  background: linear-gradient(135deg, #2dd4bf, #14b8a6);
+}
+
+.buttons button:last-child{
+  background: linear-gradient(135deg, #86efac, #22c55e);
+}
+
+.buttons button:hover{
+  transform: translateY(-3px) scale(1.05);
+
+  box-shadow:
+  0 8px 20px rgba(0,0,0,0.35);
+}
+
+@media(max-width: 1000px){
+
+  .projects-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media(max-width: 768px){
+
+  .main-title{
+    font-size: 2.8rem;
+  }
+
+  .portfolio{
+    padding: 40px 5%;
+  }
+
+  .projects-container{
+    grid-template-columns: 1fr;
+  }
+
+}

@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("image.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.to-do-list{
+    width: 90%;
+    max-width: 760px;
+
+    background:
+    linear-gradient(145deg, #f3edff, #ffffff);
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    border: 4px solid #a78bfa;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.25),
+    0 0 25px rgba(124,77,255,0.18),
+    inset 0 2px 8px rgba(255,255,255,0.8);
+
+    position: relative;
+    overflow: hidden;
+
+    animation: fadeIn 0.8s ease;
+}
+
+.to-do-list::before{
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    background: rgba(124,77,255,0.12);
+
+    border-radius: 50%;
+
+    top: -70px;
+    right: -70px;
+}
+
+.to-do-list::after{
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    background: rgba(41,182,246,0.12);
+
+    border-radius: 50%;
+
+    bottom: -50px;
+    left: -40px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.to-do-list h1{
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: #7c4dff;
+
+    text-shadow: 0 4px 10px rgba(124,77,255,0.25);
+}
+
+.to-do-list div{
+    display: flex;
+    gap: 12px;
+}
+
+.to-do-list input{
+    flex: 1;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 3px solid #d6ccff;
+
+    outline: none;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    background-color: #f8f6ff;
+
+    transition: 0.3s;
+}
+
+.to-do-list input:focus{
+    border-color: #7c4dff;
+
+    box-shadow:
+    0 0 12px rgba(124,77,255,0.35);
+
+    transform: scale(1.01);
+}
+
+.to-do-list input::placeholder{
+    color: #888;
+}
+
+.add-button{
+    padding: 18px 24px;
+
+    border: none;
+    border-radius: 16px;
+
+    background: linear-gradient(135deg, #7c4dff, #5e35b1);
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.add-button:hover{
+    transform: scale(1.06);
+
+    box-shadow:
+    0 6px 18px rgba(124,77,255,0.4);
+}
+
+ol{
+    margin-top: 35px;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+
+    background: #f8f6ff;
+
+    border-left: 8px solid #7c4dff;
+
+    margin-bottom: 18px;
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    transition: 0.3s;
+}
+
+li:hover{
+    transform: translateY(-4px);
+
+    box-shadow:
+    0 8px 18px rgba(0,0,0,0.12);
+}
+
+.text{
+    flex: 1;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    color: #333;
+
+    word-break: break-word;
+}
+
+.delete-button,
+.move-up,
+.move-down{
+    border: none;
+
+    padding: 10px 14px;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.delete-button{
+    background: linear-gradient(135deg, #ff5252, #d32f2f);
+}
+
+.delete-button:hover{
+    transform: scale(1.08);
+}
+
+.move-up{
+    background: linear-gradient(135deg, #29b6f6, #0288d1);
+}
+
+.move-up:hover{
+    transform: scale(1.08);
+}
+
+.move-down{
+    background: linear-gradient(135deg, #66bb6a, #388e3c);
+}
+
+.move-down:hover{
+    transform: scale(1.08);
+}
+
+@media(max-width: 700px){
+
+    .to-do-list{
+        padding: 28px;
+    }
+
+    .to-do-list h1{
+        font-size: 2.7rem;
+    }
+
+    .to-do-list div{
+        flex-direction: column;
+    }
+
+    .add-button{
+        width: 100%;
+    }
+
+    li{
+        flex-wrap: wrap;
+    }
+
+    .text{
+        width: 100%;
+    }
+}

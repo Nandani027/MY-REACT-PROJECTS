@@ -1,0 +1,35 @@
+.counter {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: lightgray;
+  border: 1px solid transparent;
+}
+
+.counter:hover {
+  border-color: gray;
+}
+
+.hero {
+  text-align: center;
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#next-steps {
+  display: flex;
+  gap: 10px;
+}
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+}
+
+#spacer {
+  height: 50px;
+}

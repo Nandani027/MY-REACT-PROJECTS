@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2f7 0%, #dfe7f1 50%, #f8fbff 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+  color: #111;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* soft glowing background blobs */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+body::before {
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 182, 193, 0.35);
+  top: 40px;
+  left: 60px;
+}
+
+body::after {
+  width: 320px;
+  height: 320px;
+  background: rgba(173, 216, 230, 0.35);
+  bottom: 40px;
+  right: 60px;
+}
+
+.container {
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.7s ease;
+}
+
+.container h1 {
+  width: 100%;
+  margin: 0 0 12px;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #111827;
+  text-align: left;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.container h1 span {
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  background-clip:content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.color-display {
+  width: 100%;
+  height: 340px;
+  margin: 24px 0 28px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 12px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  backdrop-filter: blur(10px);
+}
+
+.color-display::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.08) 35%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.color-display::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.08) 35%,
+    rgba(0, 0, 0, 0) 60%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.color-display:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 
+    0 18px 40px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.color-display p {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  z-index: 3;
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  padding: 12px 18px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+label {
+  width: 100%;
+  display: block;
+  text-align: left;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* enhanced color picker */
+input[type="color"] {
+  width: 100%;
+  height: 72px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 10px;
+  box-shadow: 
+    0 10px 24px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  backdrop-filter: blur(12px);
+}
+
+input[type="color"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 14px 28px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+input[type="color"]:active {
+  transform: scale(0.98);
+}
+
+input[type="color"]:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 4px rgba(100, 149, 237, 0.18),
+    0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 14px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 14px;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: 14px;
+}
+
+
+/* responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 14px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .container h1 {
+    font-size: 2.4rem;
+  }
+
+  .color-display {
+    height: 280px;
+  }
+
+  input[type="color"] {
+    height: 64px;
+  }
+}
