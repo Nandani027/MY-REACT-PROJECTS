@@ -1,4 +1,4 @@
-# 📝 Todo List App
+# 📝 Todo List
 
 A React-based task management application that allows users to add, edit, and delete daily tasks.
 
