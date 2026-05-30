@@ -13,3 +13,5 @@ A React-based color picker that lets users select and preview colors with a clea
 
 ### 🛠️ Built With
 React • JavaScript • CSS • Vite
+
+---
