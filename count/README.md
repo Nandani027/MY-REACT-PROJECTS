@@ -13,3 +13,5 @@ A React-based counter application with a clean interface for incrementing, decre
 
 ### 🛠️ Built With
 React • JavaScript • CSS • Vite
+
+---
