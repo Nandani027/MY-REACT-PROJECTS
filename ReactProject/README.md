@@ -1,16 +1,19 @@
-# React + Vite
+# 🚀 React Project Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application that showcases multiple react projects in one place, and contain live demo and Github links.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 📂 Multiple project cards
+- 🔗 Direct access to live demos
+- 🎨 Modern and interactive UI
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+https://my-react-projects-cu79-at00cosfb.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Built With
+React • JavaScript • CSS • Vite
+
+---
